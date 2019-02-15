@@ -57,8 +57,8 @@ if (has("gui_running"))
         source $VIMRUNTIME/menu.vim
     endif
     if argc() == 1
-        silent execute '!start gvim --servername gvim --remote-tab-silent "'.argv(0).'"'
-        call remote_foreground("gvim")
+        silent execute '!start gvim --servername vimer --remote-tab-silent "'.argv(0).'"'
+        call remote_foreground("vimer")
         silent execute "q"
     endif
 else
