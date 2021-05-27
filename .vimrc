@@ -36,20 +36,20 @@ set complete=.,w,b,u,t,i,d completeopt=longest,menu
 set encoding=utf-8 termencoding=utf-8 fileencoding=utf-8
 set nowritebackup noswapfile autoread writeany nolazyredraw
 set tabstop=4 shiftwidth=4 softtabstop=4 smarttab expandtab
-set guifont=Consolas:h10:cANSI guifontwide=NSimSun:h10:cANSI
+set guifont=Consolas:h11:cANSI guifontwide=NSimSun:h11:cANSI
 set fileencodings=ucs-bom,utf-8,chinese,gb18030,big5,euc-jp,euc-kr,latin1
 set autoindent smartindent copyindent cindent cinoptions=:0,g0,t0,i0,N-s,E-s,(s,W4,m1,j1
 "===================================================================================================
 "    GVIM
 "===================================================================================================
 if (has("gui_running"))
-    set lines=55
-    set columns=120
+    set lines=60
+    set columns=130
     set guioptions=
     set clipboard+=unnamed
     set guitablabel=%t\ %M
     language messages en
-    winpos 700 75
+    winpos 1200 240
     autocmd GUIEnter * set visualbell t_vb=
     autocmd BufRead,TabEnter * let &titlestring=expand("%:p")
     if (has("win32"))
@@ -106,6 +106,7 @@ highlight Ignore       guifg=grey40  gui=NONE ctermfg=241 cterm=NONE
 highlight Todo         guifg=orangered guibg=yellow2 gui=NONE ctermfg=202 ctermbg=226 cterm=NONE
 
 highlight cppStatement guifg=#F92672 gui=NONE
+highlight Delimiter    guifg=#F92672 gui=NONE
 highlight Exception    guifg=#5cd9ef gui=NONE ctermfg=45  cterm=NONE
 highlight Operator     guifg=#5cd9ef gui=NONE ctermfg=45  cterm=NONE
 highlight StorageClass guifg=#5cd9ef gui=NONE ctermfg=45  cterm=NONE
